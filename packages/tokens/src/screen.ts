@@ -3,4 +3,4 @@ export const screen = {
   md: '64rem',
   lg: '80rem',
   xl: '90rem',
-}
+} as const

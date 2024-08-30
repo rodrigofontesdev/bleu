@@ -110,4 +110,4 @@ export const color = {
       95: 'rgb(255 255 255 / 0.95)',
     },
   },
-}
+} as const

@@ -4,4 +4,4 @@ export const line = {
   md: 1.5,
   lg: 1.75,
   xl: 2,
-}
+} as const

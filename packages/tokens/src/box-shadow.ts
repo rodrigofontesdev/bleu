@@ -13,4 +13,4 @@ export const shadow = {
     lg: 'inset 0 12px 12px 0 rgb(0 0 0 / 0.25)',
     xl: 'inset 0 16px 16px 0 rgb(0 0 0 / 0.25)',
   },
-}
+} as const

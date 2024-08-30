@@ -14,4 +14,4 @@ export const outline = {
     yellow: 'rgb(242 202 80 / 0.25)',
     sky: 'rgb(80 192 242 / 0.25)',
   },
-}
+} as const

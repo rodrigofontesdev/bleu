@@ -27,4 +27,4 @@ export const space = {
   90: '28.125rem',
   95: '29.6875rem',
   100: '31.25rem',
-}
+} as const
