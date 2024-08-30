@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "module": "CommonJS",
+    "moduleResolution": "Node10",
+    "preserveWatchOutput": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2016"
+  },
+  "exclude": ["node_modules"]
+}

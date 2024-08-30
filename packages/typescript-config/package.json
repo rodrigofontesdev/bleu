@@ -1,0 +1,8 @@
+{
+  "name": "@bleukit/typescript-config",
+  "version": "1.0.0",
+  "description": "TypeScript settings to share with packages.",
+  "author": "Rodrigo Fontes <oi@rodrigofontes.dev> (https://rodrigofontes.dev)",
+  "license": "MIT",
+  "private": true
+}
