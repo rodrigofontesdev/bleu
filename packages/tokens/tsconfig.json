@@ -1,0 +1,4 @@
+{
+  "extends": "@bleukit/typescript-config/base.json",
+  "include": ["src"]
+}

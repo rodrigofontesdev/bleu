@@ -1,0 +1,25 @@
+{
+  "name": "@bleukit/tokens",
+  "version": "1.0.0",
+  "description": "Design tokens to be used across Brutus's ecosystem of products.",
+  "author": "Rodrigo Fontes <oi@rodrigofontes.dev> (https://rodrigofontes.dev)",
+  "license": "MIT",
+  "keywords": [
+    "tokens",
+    "design-system",
+    "css-in-js",
+    "styled-components"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+  },
+  "devDependencies": {
+    "@bleukit/typescript-config": "*",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}
