@@ -1,0 +1,22 @@
+{
+  "name": "bleukit",
+  "version": "1.0.0",
+  "description": "The Bleu design system defines the foundations of user interfaces across Brutus's ecosystem of products.",
+  "author": "Rodrigo Fontes <oi@rodrigofontes.dev> (https://rodrigofontes.dev)",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "keywords": [
+    "ui",
+    "design-system",
+    "react"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigofontesdev/bleu.git"
+  },
+  "scripts": {}
+}
