@@ -111,3 +111,5 @@ export const color = {
     },
   },
 } as const
+
+export type ColorProps = typeof color

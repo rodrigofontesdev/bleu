@@ -28,3 +28,5 @@ export const space = {
   95: '29.6875rem',
   100: '31.25rem',
 } as const
+
+export type SpaceProps = typeof space

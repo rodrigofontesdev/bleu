@@ -4,3 +4,5 @@ export const screen = {
   lg: '80rem',
   xl: '90rem',
 } as const
+
+export type ScreenProps = typeof screen

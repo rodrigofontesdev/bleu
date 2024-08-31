@@ -5,3 +5,5 @@ export const blur = {
   lg: 'blur(12px)',
   xl: 'blur(16px)',
 } as const
+
+export type BlurProps = typeof blur

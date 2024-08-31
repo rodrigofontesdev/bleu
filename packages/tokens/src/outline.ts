@@ -15,3 +15,5 @@ export const outline = {
     sky: 'rgb(80 192 242 / 0.25)',
   },
 } as const
+
+export type OutlineProps = typeof outline

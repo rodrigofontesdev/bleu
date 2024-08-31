@@ -5,3 +5,5 @@ export const line = {
   lg: 1.75,
   xl: 2,
 } as const
+
+export type LineProps = typeof line

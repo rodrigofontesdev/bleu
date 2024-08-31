@@ -6,3 +6,5 @@ export const radius = {
   xl: '20px',
   full: '9999px',
 } as const
+
+export type RadiusProps = typeof radius

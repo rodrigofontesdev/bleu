@@ -8,4 +8,6 @@ export const fontWeight = {
   bold: 700,
   ultraBold: 800,
   heavy: 900,
-}
+} as const
+
+export type FontWeightProps = typeof fontWeight

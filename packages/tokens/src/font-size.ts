@@ -12,3 +12,5 @@ export const fontSize = {
   '7xl': '2.75rem',
   '8xl': '3rem',
 } as const
+
+export type FontSizeProps = typeof fontSize

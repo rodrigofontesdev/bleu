@@ -14,3 +14,5 @@ export const shadow = {
     xl: 'inset 0 16px 16px 0 rgb(0 0 0 / 0.25)',
   },
 } as const
+
+export type ShadowProps = typeof shadow
