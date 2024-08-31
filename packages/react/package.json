@@ -1,0 +1,36 @@
+{
+  "name": "@bleukit/react",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Rodrigo Fontes <oi@rodrigofontes.dev> (https://rodrigofontes.dev)",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "react",
+    "styled-components"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@bleukit/tokens": "*",
+    "@bleukit/typescript-config": "*",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
+}

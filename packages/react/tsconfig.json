@@ -1,0 +1,4 @@
+{
+  "extends": "@bleukit/typescript-config/react.json",
+  "include": ["src"]
+}
