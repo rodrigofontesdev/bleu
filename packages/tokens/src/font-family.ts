@@ -1,5 +1,5 @@
 export const fontFamily = {
-  primary: '"Montserrat", montserrat-fallback, system-ui',
+  primary: '"Montserrat", montserrat-fallback, sans-serif',
 } as const
 
 export type FontFamilyProps = typeof fontFamily
