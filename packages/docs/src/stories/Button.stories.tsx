@@ -125,6 +125,7 @@ export const Disabled: Story = {
 export const Link: Story = {
   args: {
     as: 'a',
+    href: '#',
     role: 'button',
     icon: faHouse,
     variant: 'primary',
@@ -132,6 +133,11 @@ export const Link: Story = {
   },
   argTypes: {
     disabled: {
+      control: {
+        disable: true,
+      },
+    },
+    href: {
       control: {
         disable: true,
       },
