@@ -1,11 +1,31 @@
-import { color, fontFamily, fontSize, fontWeight, line, radius, shadow } from '@bleukit/tokens'
-
-export const bleu = {
+import {
+  backdrop,
   color,
+  filter,
   fontFamily,
   fontSize,
   fontWeight,
   line,
+  motion,
+  opacity,
+  outline,
   radius,
   shadow,
+  space,
+} from '@bleukit/tokens'
+
+export const bleu = {
+  backdrop,
+  color,
+  filter,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  line,
+  motion,
+  opacity,
+  outline,
+  radius,
+  shadow,
+  space,
 }
