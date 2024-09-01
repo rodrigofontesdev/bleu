@@ -1,4 +1,9 @@
-import styled from 'styled-components'
+import { ComponentProps } from 'react'
+import styled, { WebTarget } from 'styled-components'
+
+export type BoxProps = {
+  as?: WebTarget
+} & ComponentProps<typeof Box>
 
 export const Box = styled.div`
   position: relative;
