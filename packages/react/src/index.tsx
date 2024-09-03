@@ -11,6 +11,7 @@ export * from './components/Select'
 export * from './components/Steps'
 export * from './components/Text'
 export * from './components/TitleWithSeparator'
+export * from './components/Toastiny'
 export * from './styles/theme'
 
 // TODO: export GlobalStyle

@@ -10,6 +10,7 @@ import {
   opacity,
   outline,
   radius,
+  screen,
   shadow,
   space,
 } from '@bleukit/tokens'
@@ -26,6 +27,7 @@ export const bleu = {
   opacity,
   outline,
   radius,
+  screen,
   shadow,
   space,
 }
