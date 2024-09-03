@@ -16,6 +16,10 @@
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react,styled-components",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react,styled-components --watch"
   },
+  "dependencies": {
+    "react-imask": "^7.6.1",
+    "react-select": "^5.8.0"
+  },
   "devDependencies": {
     "@bleukit/tokens": "*",
     "@bleukit/typescript-config": "*",
