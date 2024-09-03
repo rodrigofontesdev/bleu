@@ -9,7 +9,7 @@ export const Separator = styled.div<{ $disabled: boolean }>`
   opacity: ${({ theme }) => theme.opacity[15]};
 `
 
-export const TitleContainer = styled.div<{
+export const Container = styled.div<{
   $orientation: 'horizontal' | 'vertical'
   $size: number
 }>`

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Separator, TitleContainer } from './styles'
+import { Container, Separator } from './styles'
 
 type TitleWithSeparatorProps = {
   children: ReactNode
@@ -15,10 +15,10 @@ export function TitleWithSeparator({
   size = 100,
 }: TitleWithSeparatorProps) {
   return (
-    <TitleContainer $orientation={orientation} $size={size}>
+    <Container $orientation={orientation} $size={size}>
       <Separator $disabled={separator === 'right'}></Separator>
       {children}
       <Separator $disabled={separator === 'left'}></Separator>
-    </TitleContainer>
+    </Container>
   )
 }
