@@ -15,7 +15,7 @@ import {
   space,
 } from '@bleukit/tokens'
 
-export const bleu = {
+export const theme = {
   backdrop,
   color,
   filter,
