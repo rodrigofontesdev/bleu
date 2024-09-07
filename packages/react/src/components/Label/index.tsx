@@ -16,3 +16,5 @@ export function Label({ text, children, inputId, variant = 'normal', ...props }:
     </StyledLabel>
   )
 }
+
+Label.displayName = 'Label'

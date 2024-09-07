@@ -5,7 +5,7 @@ export const StyledLabel = styled.label<{ $variant: 'normal' | 'large' }>`
   font-family: ${({ theme }) => theme.fontFamily.primary};
   font-size: ${({ theme, $variant }) =>
     $variant === 'large' ? theme.fontSize.md : theme.fontSize.sm};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   line-height: ${({ theme }) => theme.line.sm};
 
   & > :first-child {
