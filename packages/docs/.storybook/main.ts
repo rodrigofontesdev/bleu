@@ -1,5 +1,7 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 import { dirname, join } from 'path'
+import remarkGfm from 'remark-gfm'
+import remarkGemoji from 'remark-gemoji'
 
 function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, 'package.json')))
@@ -13,7 +15,17 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-essentials'),
     getAbsolutePath('@chromatic-com/storybook'),
     getAbsolutePath('@storybook/addon-interactions'),
-    getAbsolutePath('@storybook/addon-themes'),
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm, remarkGemoji],
+          },
+        },
+      },
+    },
+    '@chromatic-com/storybook'
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
