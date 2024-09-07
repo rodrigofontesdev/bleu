@@ -11,3 +11,5 @@ export const Box = styled.div`
   border-radius: ${({ theme }) => theme.radius.sm};
   box-shadow: ${({ theme }) => theme.shadow.outer.sm};
 `
+
+Box.displayName = 'Box'
