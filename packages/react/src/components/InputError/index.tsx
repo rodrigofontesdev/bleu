@@ -7,3 +7,5 @@ type InputErrorProps = {
 export function InputError({ message }: InputErrorProps) {
   return <StyledInputError role="alert">{message}</StyledInputError>
 }
+
+InputError.displayName = 'InputError'
