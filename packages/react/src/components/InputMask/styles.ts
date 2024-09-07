@@ -11,7 +11,7 @@ export const StyledInput = styled.input<StyledInputProps>`
   background-color: transparent;
   color: ${({ theme }) => theme.color.gray[400]};
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   line-height: ${({ theme }) => theme.line.sm};
   border-radius: inherit;
 
@@ -48,7 +48,7 @@ export const Prefix = styled.span<StyledInputProps>`
   position: relative;
   color: ${({ theme }) => theme.color.gray[400]};
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
   border-right: 2px solid ${({ theme }) => theme.color.white.alpha[25]};
   pointer-events: none;
 
@@ -100,7 +100,7 @@ export const Container = styled.div`
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: ${({ theme }) => theme.color.black.alpha[25]};
+      background-color: ${({ theme }) => theme.color.black.alpha[30]};
       border-radius: inherit;
     }
   }
