@@ -7,6 +7,7 @@ export default {
   component: Heading,
   args: {
     titleColor: 'primary',
+    as: 'header',
   },
   argTypes: {
     children: {
