@@ -8,7 +8,7 @@ import { StyledButton } from './styles'
 type ButtonProps = {
   icon: IconDefinition
   iconSize?: SizeProp
-  variant?: 'primary' | 'success' | 'danger' | 'warning' | 'info'
+  appearance?: 'primary' | 'success' | 'danger' | 'warning' | 'info'
   size?: 'normal' | 'small' | 'large'
   loading?: boolean
   as?: WebTarget
@@ -18,14 +18,14 @@ type ButtonProps = {
 export function Button({
   icon,
   iconSize = '2x',
-  variant = 'primary',
+  appearance = 'primary',
   size = 'normal',
   loading = false,
   as,
   ...props
 }: ButtonProps) {
   return (
-    <StyledButton $variant={variant} $size={size} as={as} {...props}>
+    <StyledButton $appearance={appearance} $size={size} as={as} {...props}>
       {loading ? (
         <FontAwesomeIcon icon={faSpinner} size={iconSize} spin />
       ) : (

@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components'
 
 interface StyledButtonProps {
-  $variant: 'primary' | 'success' | 'danger' | 'warning' | 'info'
+  $appearance: 'primary' | 'success' | 'danger' | 'warning' | 'info'
   $size: 'normal' | 'small' | 'large'
 }
 
@@ -22,6 +22,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
   border-radius: ${({ theme }) => theme.radius.full};
   box-shadow: ${({ theme }) => theme.shadow.inner.sm};
   cursor: pointer;
+  transition: ${({ theme }) => theme.motion.transition.normal};
+  transition-property: background-color;
 
   &::before {
     content: '';
@@ -50,8 +52,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
     cursor: not-allowed;
   }
 
-  ${({ theme, $variant }) => {
-    switch ($variant) {
+  ${({ theme, $appearance }) => {
+    switch ($appearance) {
       case 'success':
         return css`
           &,
@@ -59,7 +61,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
             background-color: ${theme.color.green[400]};
           }
 
-          &:focus {
+          &:hover {
+            background-color: ${theme.color.green[500]};
+          }
+
+          &:not(:disabled):focus {
             outline-color: ${theme.outline.color.green};
           }
         `
@@ -70,7 +76,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
             background-color: ${theme.color.red[400]};
           }
 
-          &:focus {
+          &:hover {
+            background-color: ${theme.color.red[500]};
+          }
+
+          &:not(:disabled):focus {
             outline-color: ${theme.outline.color.red};
           }
         `
@@ -81,7 +91,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
             background-color: ${theme.color.yellow[400]};
           }
 
-          &:focus {
+          &:hover {
+            background-color: ${theme.color.yellow[500]};
+          }
+
+          &:not(:disabled):focus {
             outline-color: ${theme.outline.color.yellow};
           }
         `
@@ -92,7 +106,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
             background-color: ${theme.color.sky[400]};
           }
 
-          &:focus {
+          &:hover {
+            background-color: ${theme.color.sky[500]};
+          }
+
+          &:not(:disabled):focus {
             outline-color: ${theme.outline.color.sky};
           }
         `
@@ -104,7 +122,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
             background-color: ${theme.color.blue[400]};
           }
 
-          &:focus {
+          &:hover {
+            background-color: ${theme.color.blue[500]};
+          }
+
+          &:not(:disabled):focus {
             outline-color: ${theme.outline.color.blue};
           }
         `
