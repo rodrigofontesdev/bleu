@@ -2,7 +2,11 @@
   "name": "@bleukit/docs",
   "version": "1.0.0",
   "description": "",
-  "author": "Rodrigo Fontes <oi@rodrigofontes.dev> (https://rodrigofontes.dev)",
+  "author": {
+    "name": "Rodrigo Fontes",
+    "email": "oi@rodrigofontes.dev",
+    "url": "https://rodrigofontes.dev"
+  },
   "license": "MIT",
   "private": true,
   "type": "module",
@@ -10,9 +14,10 @@
     "dev:vite": "vite",
     "build:vite": "tsc -b && vite build",
     "preview:vite": "vite preview",
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build",
-    "lint": "eslint ."
+    "dev": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build",
+    "lint": "eslint .",
+    "chromatic": "npx chromatic --project-token=chpt_139d7e1e388081e --build-script-name build-storybook"
   },
   "dependencies": {
     "@bleukit/react": "*",
@@ -31,6 +36,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
     "@eslint/js": "^9.9.0",
+    "@storybook/addon-a11y": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
