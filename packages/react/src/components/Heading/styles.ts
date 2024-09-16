@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 interface StyledHeading {
-  $variant: 'small' | 'normal' | 'large'
+  $size: 'small' | 'normal' | 'large'
   $align: 'left' | 'right' | 'center'
   $titleColor: 'neutral' | 'primary'
 }
@@ -32,8 +32,8 @@ export const StyledHeading = styled.header<StyledHeading>`
     margin: 0;
   }
 
-  ${({ theme, $variant }) => {
-    switch ($variant) {
+  ${({ theme, $size }) => {
+    switch ($size) {
       case 'large': {
         return css`
           > :last-child {
