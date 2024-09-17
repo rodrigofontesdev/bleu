@@ -1,11 +1,11 @@
-import { Meta, Primary, Controls } from '@storybook/blocks'
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
 import * as Box from '../stories/Box.stories'
 
 <Meta of={Box} />
 
 # Box
 
-Uma box é um tipo de componente que permite criar um efeito de "tom sobre tom" na interface.
+Box é um tipo de componente que permite criar um efeito de "tom sobre tom" na interface.
 
 Possui um fundo translúcido, com cantos arredondados e uma sombra suave ao seu redor.
 
@@ -13,37 +13,42 @@ Sendo capaz de se adaptar a cor do background, criando um leve contraste.
 
 ## Implementação no design
 
-A box deve possuir um contraste suave em relação ao plano de fundo, a recomendação é aplicar uma opacidade de 15% com a cor de background `#000000` e uma leve sombra externa.
-Deve ser suficiente para criar o efeito esperado.
+Box deve possuir um contraste suave em relação ao plano de fundo, a recomendação é aplicar uma
+opacidade de 15% com a cor de background `#000000` e uma leve sombra externa. Deve ser suficiente
+para criar o efeito esperado.
 
 | Propriedade      | Valor                                      |
 | :--------------- | :----------------------------------------- |
-| Background color | `rgba(0, 0, 0, 15%)`                       |
+| Background color | `black.alpha.15`                           |
 | Corner radius    | `8px`                                      |
 | Outer shadow     | `X:0 Y:4px B:4px S:0 C:rgba(0, 0, 0, 25%)` |
 
 ## Quando usar?
 
-O componente pode ser empregado em contextos onde um agrupamento de elementos precisa receber destaque do restante dos componentes que formam a interface da aplicação.
+O componente pode ser empregado em contextos onde um agrupamento de elementos precisa receber
+destaque do restante dos componentes que formam a interface da aplicação.
 
 <Primary />
 
 :heavy_check_mark: **Uso correto**
 
-- Criar leve efeito de contraste em relação ao plano de fundo
+- Destacar funcionalidade principal na interface
 - Evidenciar contexto de um agrupamento de elementos
 
 :x: **Uso incorreto**
 
 - Utilizar em plano de fundo claro
+- Manter baixo nível de contraste dos elementos internos
 
 ## Como usar?
 
-O componente por padrão não renderiza uma tag semântica, opcionalmente é possível definir uma tag atráves da propriedade `as`. É suportado qualquer elemento como descendente da box.
+O componente por padrão não renderiza uma tag semântica, opcionalmente é possível definir uma tag
+atráves da propriedade `as`. É suportado qualquer elemento como descendente do Box.
 
 ### React
 
-Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como instalar confira o [guia de instalação](#).
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
 
 ```js
 import { Box } from '@bleukit/react'
@@ -51,6 +56,11 @@ import { Box } from '@bleukit/react'
 
 **Propriedades**
 
-O componente suporta qualquer propriedade da interface `HTMLDivElement`, além das propriedades a seguir:
+O componente suporta qualquer propriedade da interface `HTMLDivElement`, além das propriedades
+a seguir:
 
 <Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />

@@ -7,22 +7,7 @@ export default {
   component: Box,
   argTypes: {
     children: {
-      control: { disable: true },
-      table: {
-        type: {
-          summary: 'ReactNode',
-        },
-      },
-    },
-    as: {
-      table: {
-        type: {
-          summary: 'article | aside | div | section ',
-        },
-        defaultValue: {
-          summary: 'div',
-        },
-      },
+      table: { disable: true },
     },
   },
   decorators: [
@@ -36,7 +21,7 @@ export default {
 
 type Story = StoryObj<BoxProps>
 
-export const Transparent: Story = {
+export const Default: Story = {
   args: {
     children: (
       <div
@@ -47,7 +32,7 @@ export const Transparent: Story = {
           padding: theme.space[10],
         }}
       >
-        <Heading titleColor="primary">
+        <Heading titleColor="neutral">
           <h1>Verificar E-mail</h1>
           <p>
             Acesse a caixa de entrada ou spam do e-mail, uma mensagem foi enviada, dentro você
@@ -73,7 +58,7 @@ export const Transparent: Story = {
             />
           </InputGroup.Root>
 
-          <Button icon={faEnvelope} variant="success" aria-label="Reenviar e-mail" disabled />
+          <Button icon={faEnvelope} appearance="success" aria-label="Reenviar e-mail" disabled />
         </form>
 
         <Text size="xs" weight="semiBold">
@@ -81,5 +66,25 @@ export const Transparent: Story = {
         </Text>
       </div>
     ),
+  },
+  argTypes: {
+    as: {
+      control: { disable: true },
+      table: {
+        type: {
+          summary: 'article | aside | div | section ',
+        },
+        defaultValue: {
+          summary: 'div',
+        },
+      },
+    },
+  },
+  tags: ['!dev', '!test'],
+}
+
+export const Transparent: Story = {
+  args: {
+    children: <div style={{ width: '50rem', height: '25rem' }}></div>,
   },
 }
