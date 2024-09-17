@@ -1,94 +1,189 @@
 import { Heading } from '@bleukit/react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Fragment } from 'react/jsx-runtime'
 
 export default {
   title: 'Typography/Heading',
   component: Heading,
-  args: {
-    titleColor: 'primary',
-    as: 'header',
-  },
-  argTypes: {
-    children: {
-      control: { disable: true },
-    },
-    align: {
-      options: ['left', 'center', 'right'],
-      control: { type: 'inline-radio' },
-    },
-    titleColor: {
-      options: ['neutral', 'primary'],
-      control: { type: 'inline-radio' },
-    },
-  },
 } satisfies Meta<typeof Heading>
 
 type Story = StoryObj<typeof Heading>
 
+export const Default: Story = {
+  args: {
+    children: (
+      <>
+        <h1>Página não encontrada</h1>
+        <p>Ops! A página que você está procurando não existe ou foi desativada temporariamente.</p>
+      </>
+    ),
+    titleUppercase: false,
+  },
+  argTypes: {
+    children: {
+      table: { disable: true },
+    },
+    titleColor: {
+      control: { disable: true },
+      table: {
+        type: {
+          summary: 'neutral | primary',
+        },
+        defaultValue: {
+          summary: 'neutral',
+        },
+      },
+    },
+    titleUppercase: {
+      control: { disable: true },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
+    size: {
+      control: { disable: true },
+      table: {
+        type: {
+          summary: 'small | normal | large',
+        },
+        defaultValue: {
+          summary: 'large',
+        },
+      },
+    },
+    align: {
+      control: { disable: true },
+      table: {
+        type: {
+          summary: 'left | center | right',
+        },
+        defaultValue: {
+          summary: 'center',
+        },
+      },
+    },
+    as: {
+      control: { disable: true },
+      table: {
+        type: {
+          summary: 'header | div',
+        },
+        defaultValue: {
+          summary: 'header',
+        },
+      },
+    },
+  },
+  tags: ['!dev', '!test'],
+}
+
 export const Large: Story = {
   args: {
     children: (
-      <Fragment>
+      <>
         <h2>Criar conta</h2>
         <p>
           Crie sua conta grátis em três minutos, diga adeus à planilha e fique em dia com a Receita
           Federal.
         </p>
-      </Fragment>
+      </>
     ),
-    variant: 'large',
-    titleColor: 'neutral',
+    titleColor: 'primary',
+    titleUppercase: true,
+    size: 'large',
+    align: 'center',
   },
   argTypes: {
+    children: {
+      table: { disable: true },
+    },
+    titleColor: {
+      options: ['neutral', 'primary'],
+      control: { type: 'inline-radio' },
+    },
+    size: {
+      options: ['small', 'normal', 'large'],
+      control: { type: 'inline-radio' },
+    },
     align: {
-      control: { disable: true },
+      if: {
+        arg: 'size',
+        neq: 'large',
+      },
+      options: ['left', 'center', 'right'],
+      control: { type: 'inline-radio' },
     },
   },
-  decorators: [(Story) => <div style={{ width: '420px' }}>{<Story />}</div>],
+  decorators: [(Story) => <div style={{ width: '28rem' }}>{<Story />}</div>],
 }
 
 export const Normal: Story = {
   args: {
+    ...Large.args,
     children: (
-      <Fragment>
+      <>
         <h2>Maio/2024</h2>
         <span>R$ 6.250,00</span>
-      </Fragment>
+      </>
     ),
-    variant: 'normal',
-    align: 'center',
+    titleUppercase: false,
+    size: 'normal',
+  },
+  argTypes: {
+    ...Large.argTypes,
   },
 }
 
 export const Small: Story = {
   args: {
+    ...Large.args,
     children: (
-      <Fragment>
+      <>
         <h2>Comércio</h2>
         <p>Revenda de mercadorias</p>
-      </Fragment>
+      </>
     ),
-    variant: 'small',
+    titleUppercase: false,
+    size: 'small',
     align: 'left',
+  },
+  argTypes: {
+    ...Large.argTypes,
   },
 }
 
 export const Inverse: Story = {
   args: {
+    ...Large.args,
     children: (
-      <Fragment>
+      <>
         <p>Período de apuração</p>
         <h2>Janeiro/2024</h2>
-      </Fragment>
+      </>
     ),
-    variant: 'normal',
+    titleUppercase: false,
+    size: 'normal',
     align: 'left',
   },
   argTypes: {
-    variant: {
-      options: ['small', 'normal'],
-      control: { type: 'inline-radio' },
-    },
+    ...Large.argTypes,
   },
+}
+
+export const Neutral: Story = {
+  args: {
+    ...Large.args,
+    children: (
+      <>
+        <h2>Acessar conta</h2>
+        <p>Acesse sua conta utilizando o CNPJ da empresa.</p>
+      </>
+    ),
+    titleColor: 'neutral',
+  },
+  argTypes: {
+    ...Large.argTypes,
+  },
+  decorators: Large.decorators,
 }

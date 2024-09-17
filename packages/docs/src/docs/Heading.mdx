@@ -1,0 +1,78 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as Heading from '../stories/Heading.stories'
+
+<Meta of={Heading} />
+
+# Heading
+
+Heading é um tipo de componente que permite criar um título para uma página ou sessão da interface.
+
+Possui tamanho de texto maior que o restante do conteúdo ao redor e pode contar com um subtítulo.
+
+## Implementação no design
+
+Heading deve possuir um título com destaque maior que o restante do conteúdo, isso pode ser
+alcançado utilizando um tamanho de fonte maior, uma cor diferente ou todas as letras maiúsculas.
+Geralmente o título é seguido por um subtítulo, com tamanho de fonte menor para respeitar uma
+hierarquia de importância no conteúdo.
+
+| Propriedade          | Valor                              |
+| :------------------- | :--------------------------------- |
+| Font family          | `Montserrat`                       |
+| Align                | `left` `center` `right`            |
+| Title color          | `gray.400` `blue.400`              |
+| Title size           | `36px` `24px` `20px`               |
+| Title weight         | `bold`                             |
+| Title case           | `capitalize` `uppercase`           |
+| Title line height    | `125%`                             |
+| Title space          | `top:0 bottom:25px right:0 left:0` |
+| Subtitle color       | `gray.400`                         |
+| Subtitle size        | `16px` `14px` `12px`               |
+| Subtitle weight      | `semi bold`                        |
+| Subtitle line height | `150%`                             |
+
+## Quando usar?
+
+O componente deve ser utilizado para indicar a hierarquia e importância do conteúdo.
+
+É possível inverter a orderm de exibição dos elementos internos, basta inserir o subtítulo antes do
+título.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Utilizar um `h1` por página
+- Respeitar nível dos títulos, começar por `h1`, seguido do `h2` e assim por diante
+
+:x: **Uso incorreto**
+
+- Utilizar título sem uma tag de cabeçalho `h1`...`h6`
+- Utilizar subtítulo sem envolve-lo por uma tag de paragrafo
+- Utilizar subtítulo em caixa alta
+
+## Como usar?
+
+O componente renderiza uma tag `header`, opcionalmente é possível alterar a tag atráves da
+propriedade `as`. Para criar o título do cabeçalho utilize qualquer tag `h1` a `h6`, sempre
+respeitando a hierarquia. Para subtítulo utilize as tags `p` ou `span`.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { Heading } from '@bleukit/react'
+```
+
+**Propriedades**
+
+O componente suporta qualquer propriedade da interface `HTMLDivElement`, além das propriedades
+a seguir:
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
