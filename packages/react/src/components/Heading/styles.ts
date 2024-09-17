@@ -4,6 +4,7 @@ interface StyledHeading {
   $size: 'small' | 'normal' | 'large'
   $align: 'left' | 'right' | 'center'
   $titleColor: 'neutral' | 'primary'
+  $titleUppercase: boolean
 }
 
 export const StyledHeading = styled.header<StyledHeading>`
@@ -21,6 +22,7 @@ export const StyledHeading = styled.header<StyledHeading>`
     color: ${({ theme, $titleColor }) => $titleColor === 'primary' && theme.color.blue[400]};
     font-weight: ${({ theme }) => theme.fontWeight.bold};
     line-height: ${({ theme }) => theme.line.sm};
+    text-transform: ${({ $titleUppercase }) => $titleUppercase && 'uppercase'};
     margin: 0;
   }
 
@@ -47,7 +49,6 @@ export const StyledHeading = styled.header<StyledHeading>`
           h5,
           h6 {
             font-size: ${theme.fontSize['5xl']};
-            text-transform: uppercase;
           }
 
           p,
