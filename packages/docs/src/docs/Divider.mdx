@@ -1,0 +1,60 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as Divider from '../stories/Divider.stories'
+
+<Meta of={Divider} />
+
+# Divider
+
+Divider é um tipo de componente que permite separar elementos na interface.
+
+Possui comprimento que pode variar, podendo ser exibido na posição horizontal ou vertical.
+
+## Implementação no design
+
+Divider por característica tem comprimento ajustável em relação ao conteúdo, com espessura fina e
+coloração sutil tornado um elemento discreto no UI.
+
+| Propriedade | Valor      |
+| :---------- | :--------- |
+| Color       | `blue.400` |
+| Opacity     | `15%`      |
+| Thickness   | `2px`      |
+
+## Quando usar?
+
+O componente pode ser ser utilizado para facilitar a organização visual de interfaces, permitindo a
+separação clara de diferentes contextos ou elementos.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Separar contextos na interface
+
+:x: **Uso incorreto**
+
+- Utilizar com ângulo inclinado
+
+## Como usar?
+
+O componente pode ser utilizado horizontalmente ou verticalmente, na última sendo necessário
+informar uma altura para o elemento.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { Divider } from '@bleukit/react'
+```
+
+**Propriedades**
+
+A propriedade `height` tem efeito apenas quando utilizada em conjunto com `axis = vertical`.
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
