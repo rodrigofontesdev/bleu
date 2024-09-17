@@ -1,0 +1,82 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as Button from '../stories/Button.stories'
+
+<Meta of={Button} />
+
+# Button
+
+Button é um tipo de componente interativo que pode ser acionado pelo usuário por meio de mouse,
+teclado, toque, comando de voz ou dispositivo de assistência. Ao ser acionado desencadeia uma ação
+específica, como o envio de um formulário ou a abertura de um outro elemento na interface.
+
+Possui formato arredondado, com cores vibrantes, contando com um ícone interno, proporcionando uma
+aparência moderna e amigável.
+
+## Implementação no design
+
+Button conta com uma gama de variações no visual, desde tamanho, cores e icones. Por mais que ele
+proporcione uma grade de opções para se trabalhar, é importante respeitar algumas regras visuais na
+sua utilização, de forma onde sua aparência permanecessa homogenea independente do canal de
+comunicação.
+
+| Propriedade      | Valor                                                   |
+| :--------------- | :------------------------------------------------------ |
+| Background color | `blue.400` `green.400` `red.400` `yellow.400` `sky.400` |
+| Text color       | `gray.400`                                              |
+| Text size        | `40px` `32px` `28px`                                    |
+| Width            | `72px` `60px` `48px`                                    |
+| Height           | `72px` `60px` `48px`                                    |
+| Corner radius    | `100%`                                                  |
+| Inner shadow     | `X:0 Y:4px B:4px S:0 C:rgba(0, 0, 0, 25%)`              |
+
+A biblioteca de ícones escolhida para trabalhar se chama
+[Font Awesome](https://fontawesome.com/search), fornecendo milhares de ícones para utilizar.
+
+## Quando usar?
+
+O componente pode ser utilizado para ações claras e objetivas que o usuário precisa realizar dentro
+da interface. Sempre que possível inserir o componente próximo ao seu contexto.
+
+Uma boa prática pode ser fornecer uma variação visual diferente ao botão de acordo com o objetivo
+de sua ação, por exemplo, pode ser interessante aplicar uma cor vermelha a um botão de cancelar,
+por outro lado a cor verde pode ser aplicada em um botão de salvar o perfil do usuário.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Utilizar para ações principais, como "Criar conta", "Enviar formulário", "Baixar arquivo"
+- Utilizar cor e icone adequado para transmitir o objetivo da ação
+- Exibir estado de loading quando uma requisição requer delay na resposta
+- Desabilitar botão para evitar o envio de multiplas requisições
+
+:x: **Uso incorreto**
+
+- Incluir texto no botão
+
+## Como usar?
+
+O componente pode ser utilizado como um elemento `button` ou `a`, independente da escolha é
+essencial fornecer um texto alternativo para o elemento utilizando `aria-label`. Ao usar o
+componente como link adicione o atributo `role="button"` para informar aos leitores de tela que o
+elemento é um botão.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { Button } from '@bleukit/react'
+```
+
+**Propriedades**
+
+O componente suporta qualquer propriedade das interfaces `HTMLButtonElement` e `HTMLAnchorElement`,
+além das propriedades a seguir:
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
