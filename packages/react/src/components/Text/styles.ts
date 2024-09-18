@@ -6,7 +6,7 @@ interface StyledTextProps {
   $weight: keyof FontWeightProps
   $line: keyof LineProps
   $italic: boolean
-  $align?: 'left' | 'right' | 'center'
+  $align?: 'left' | 'right' | 'center' | string
   $flow?: 'inline' | 'inline-block' | 'block' | string
 }
 
@@ -20,4 +20,5 @@ export const StyledText = styled.p<StyledTextProps>`
   line-height: ${({ theme, $line }) => theme.line[$line]};
   text-align: ${({ $align }) => $align ?? ''};
   margin: 0;
+  margin-bottom: ${({ theme }) => theme.space[3]};
 `
