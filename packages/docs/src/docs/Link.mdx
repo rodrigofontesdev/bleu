@@ -1,0 +1,68 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as Link from '../stories/Link.stories'
+
+<Meta of={Link} />
+
+# Link
+
+Link é um tipo de componente que permite criar um hyperlink para uma página, arquivo, e-mail ou
+telefone localizado no mesmo domínio ou qualquer outro endereço URL.
+
+Possui a aparência de um texto comum com o diferencial de redirecionar o usuário para algum outro
+destino.
+
+## Implementação no design
+
+Link é semelhante a um texto de paragráfo, com a diferença de ao passar o mouse sobre o elemento a
+cor altera, indicado visualmente para o usuário que o texto contém uma ação ao ser clicado.
+
+| Propriedade | Valor                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| Font family | `Montserrat`                                                                           |
+| Color       | `gray.400` `blue.400`                                                                  |
+| Font size   | `12px` `14px` `16px` `18px` `20px` `24px` `28px` `32px` `36px` `40px` `44px` `48px`    |
+| Font weight | `thin` `ultra light` `light` `normal` `medium` `semi bold` `bold` `ultra bold` `heavy` |
+| Font style  | `normal` `italic`                                                                      |
+| Line height | `100%` `125%` `150%` `175%` `200%`                                                     |
+| Underline   | `none`                                                                                 |
+
+## Quando usar?
+
+O componente pode ser utilizado para encaminhar o usuário para um destino externo a página, como um
+outro domínio ou local da aplicação.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Indicar claramente o destino do link, evite frases genéricas como "clique aqui"
+- Abrir link externo em uma nova aba com `target="_blank"`
+- Utilizar cor contrastante para diferenciar o link do texto normal
+
+:x: **Uso incorreto**
+
+- Utilizar elemento de paragráfo dentro do link
+
+## Como usar?
+
+O componente pode ser utilizado individualmentee, dentro de um elemento paragráfo ou lista.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { Link } from '@bleukit/react'
+```
+
+**Propriedades**
+
+O componente suporta qualquer propriedade da interface `HTMLAnchorElement`, além das propriedades
+a seguir:
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
