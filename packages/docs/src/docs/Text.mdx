@@ -1,0 +1,65 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as Text from '../stories/Text.stories'
+
+<Meta of={Text} />
+
+# Text
+
+Text é um tipo de componente que permite criar paragráfos, geralmente um paragráfo é um bloco de
+texto.
+
+## Implementação no design
+
+Text pode variar em tamanho, peso da fonte, espaçamento entre linhas e alinhamento.
+
+| Propriedade | Valor                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| Font family | `Montserrat`                                                                           |
+| Color       | `gray.400`                                                                             |
+| Font size   | `12px` `14px` `16px` `18px` `20px` `24px` `28px` `32px` `36px` `40px` `44px` `48px`    |
+| Font weight | `thin` `ultra light` `light` `normal` `medium` `semi bold` `bold` `ultra bold` `heavy` |
+| Font style  | `normal` `italic`                                                                      |
+| Line height | `100%` `125%` `150%` `175%` `200%`                                                     |
+| Align       | `left` `center` `right`                                                                |
+| Margin      | `top:0 bottom:25px right:0 left:0`                                                     |
+
+## Quando usar?
+
+O componente pode ser utilizado para exibir frases genéricas, trechos de texto e conteúdos mais
+extensos.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Separar paragráfos para melhorar a legibilidade
+- Utilizar espaçamento entre as linhas de 150% para garantir melhor legibilidade
+
+:x: **Uso incorreto**
+
+- Utilizar cor no texto com baixo contraste
+
+## Como usar?
+
+O componente renderiza uma tag `p`, opcionalmente é possível alterar a tag atráves da
+propriedade `as`.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { Text } from '@bleukit/react'
+```
+
+**Propriedades**
+
+O componente suporta qualquer propriedade da interface `HTMLElement`, além das propriedades a
+seguir:
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
