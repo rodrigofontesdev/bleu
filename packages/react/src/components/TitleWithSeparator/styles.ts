@@ -10,14 +10,14 @@ export const Separator = styled.div<{ $disabled: boolean }>`
 `
 
 export const Container = styled.div<{
-  $orientation: 'horizontal' | 'vertical'
-  $size: number
+  $axis: 'horizontal' | 'vertical'
+  $separatorSize: number
 }>`
   display: flex;
   align-items: center;
 
-  ${({ theme, $orientation, $size }) => {
-    if ($orientation === 'horizontal') {
+  ${({ theme, $axis, $separatorSize }) => {
+    if ($axis === 'horizontal') {
       return css`
         column-gap: ${theme.space[5]};
       `
@@ -28,7 +28,7 @@ export const Container = styled.div<{
 
         ${Separator} {
           width: 2px;
-          height: ${$size}px;
+          height: ${$separatorSize}px;
         }
       `
     }

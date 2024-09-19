@@ -3,19 +3,19 @@ import { Container, Separator } from './styles'
 
 type TitleWithSeparatorProps = {
   children: ReactNode
-  orientation?: 'horizontal' | 'vertical'
+  axis?: 'horizontal' | 'vertical'
   separator?: 'both' | 'right' | 'left'
-  size?: number
+  separatorSize?: number
 }
 
 export function TitleWithSeparator({
   children,
-  orientation = 'horizontal',
+  axis = 'horizontal',
   separator = 'both',
-  size = 100,
+  separatorSize = 100,
 }: TitleWithSeparatorProps) {
   return (
-    <Container $orientation={orientation} $size={size}>
+    <Container $axis={axis} $separatorSize={separatorSize}>
       <Separator $disabled={separator === 'right'}></Separator>
       {children}
       <Separator $disabled={separator === 'left'}></Separator>
