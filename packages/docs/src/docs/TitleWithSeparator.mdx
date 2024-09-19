@@ -1,0 +1,65 @@
+import { Controls, Meta, Primary, Stories } from '@storybook/blocks'
+import * as TitleWithSeparator from '../stories/TitleWithSeparator.stories'
+
+<Meta of={TitleWithSeparator} />
+
+# Title With Separator
+
+Title With Separator é um tipo de componente que permite criar títulos na interface, contando com
+um estilo especial.
+
+Possui tamanho maior que o texto comum, podendo ser exibido na posição horizontal ou vertical.
+
+## Implementação no design
+
+Title With Separator deve possuir uma ou duas linhas (separador) antes e depois do título.
+
+| Propriedade         | Valor           |
+| :------------------ | :-------------- |
+| Font family         | `Montserrat`    |
+| Title color         | `blue.400`      |
+| Title size          | `18px`          |
+| Title weight        | `bold`          |
+| Title space         | `Y:10px X:25px` |
+| Separator color     | `blue.400`      |
+| Separator opacity   | `15%`           |
+| Separator thickness | `2px`           |
+| Separator radius    | `4px`           |
+
+## Quando usar?
+
+O componente deve ser utilizado para indicar um título secundário na interface.
+
+<Primary />
+
+:heavy_check_mark: **Uso correto**
+
+- Respeitar nível dos títulos, começar por `h2`, seguido do `h3` e assim por diante
+
+:x: **Uso incorreto**
+
+- Utilizar tag `h1` para o título
+- Utilizar título sem envolve-lo por uma tag
+
+## Como usar?
+
+O componente deve receber qualquer tag `h2` a `h6`, `p` ou `span` como título.
+
+### React
+
+Certifique de possuir o pacote **@bleukit/react** instalado no projeto React. Para saber como
+instalar confira o [guia de instalação](#).
+
+```js
+import { TitleWithSeparator } from '@bleukit/react'
+```
+
+**Propriedades**
+
+A propriedade `separatorSize` tem efeito apenas quando utilizada em conjunto com `axis = vertical`.
+
+<Controls />
+
+**Variações**
+
+<Stories includePrimary={false} />
